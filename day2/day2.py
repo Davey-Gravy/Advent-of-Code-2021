@@ -16,3 +16,19 @@ for i in data:
         pos[1] -= int(i[1])
 
 print(pos[0]*pos[1])
+
+# Part 2
+# reinitialize pos, initialize aim
+pos = [0, 0]
+aim = 0
+for i in data:
+    if i[0] == 'forward':
+        pos[0] += int(i[1])
+        # implement aim mechanic
+        pos[1] += int(i[1])*aim
+    elif i[0] == 'down':
+        aim += int(i[1])
+    else:
+        aim -= int(i[1])
+
+print(pos[0]*pos[1])
