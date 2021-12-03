@@ -1,5 +1,5 @@
 # Part 1
-# parse input file, split into
+# parse input file, split into list
 file = open('day2.dat')
 data = [i.split() for i in file.read().splitlines()]
 
